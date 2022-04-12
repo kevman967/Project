@@ -10,7 +10,7 @@ birth = "";
 gpa = 0.0;
 startyear = 0;
 completed_credit = 0;
-program = "";
+program = '\0';
 }
 //list of getter functions
 string student::getfirstname(){
@@ -34,7 +34,7 @@ int student::getstartyear(){
 int student::getcompleted_credit(){
     return completed_credit;
 }
-string student::getprogram(){
+char student::getprogram(){
     return program;
 }
 //list of setter functions
@@ -59,24 +59,24 @@ void student::setstartyear(int startyear1){
 void student::setcompleted_credit(int completed_credit1){
     completed_credit = completed_credit1;
 }
-void student::setprogram(string program1){
+void student::setprogram(char program1){
     program = program1;
 }
 //list of the other functions
 bool student::completeprogram(){
-    if (program == "bachelor"){
+    if (program == 'b'){
         if (completed_credit == 140)
             return true;
         else 
             return false;
     }
-    if (program == "master"){
+    if (program == 'm'){
         if (completed_credit == 16)
             return true;
         else
             return false;
     }
-    if (program == "phd"){
+    if (program == 'p'){
         if(completed_credit == 12)
             return true;
         else

@@ -12,7 +12,7 @@ string getbirth();
 double getgpa();
 int getstartyear();
 int getcompleted_credit();
-string getprogram();
+char getprogram();
 //list of setters
 void setfirstname(string);
 void setlastname(string);
@@ -21,7 +21,7 @@ void setbirth(string);
 void setgpa(double);
 void setstartyear(int);
 void setcompleted_credit(int);
-void setprogram(string);
+void setprogram(char);
 //list of the other functions
 bool completeprogram();
 string studentstatus();
@@ -36,5 +36,5 @@ string birth;
 double gpa;
 int startyear;
 int completed_credit;
-string program;
+char program;
 };
