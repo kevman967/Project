@@ -1,18 +1,19 @@
-#include "studentstaff.h"
+#include "student_staff.h"
 
-Student_Staff::Student_Staff()
+student_staff::student_staff()
 { //constructor
-s = new Student[5];
-sf = new Staff[5];
-ReadStudent(s);
-ReadStaff(sf);
+students = new student[5];
+staffs = new staff[5];
+readstudent(students);
+readstaff(staffs);
 }
-void Student_Staff::ReadStudent(class Student StudentDetails[])
+void student_staff::readstudent(class student studentDetails[])
 {
 ifstream in;
 int totalLines, num;
 float f;
 string temp;
+int tempint;
 
 in.open("students.txt");
 in >> totalLines;
@@ -20,26 +21,26 @@ int i = 0;
 for (i = 0; i < totalLines; i++)
 {
 in >> temp;
-StudentDetails[i].SetFirstName(temp);
+studentDetails[i].setfirstname(temp);
 in >> temp;
-StudentDetails[i].SetLastName(temp);
+studentDetails[i].setlastname(temp);
 in >> num;
-StudentDetails[i].SetId(num);
+studentDetails[i].setid(num);
 in >> temp;
-StudentDetails[i].SetDateOfBirth(temp);
+studentDetails[i].setbirth(temp);
 in >> f;
-StudentDetails[i].SetGPA(f);
+studentDetails[i].setgpa(f);
 in >> temp;
-StudentDetails[i].SetStartYear(temp);
+studentDetails[i].setstartyear(tempint);
 in >> num;
-StudentDetails[i].SetCompletedCredit(num);
+studentDetails[i].setcompleted_credit(num);
 in >> temp;
-StudentDetails[i].SetProgram(temp);
+studentDetails[i].setprogram(tempint);
 }
 cout << "\nRead student.txt Sucessfully..." << endl;
 in.close();
 }
-void Student_Staff::ReadStaff(class Staff StaffData[])
+void student_staff::readstaff(class staff StaffData[])
 {
 fstream in;
 string temp, date;
@@ -51,58 +52,58 @@ in >> totalLines;
 for (int i = 0; i < totalLines; i++)
 {
 in >> temp;
-StaffData[i].SetFirstName(temp);
+StaffData[i].setfirstname(temp);
 in >> temp;
-StaffData[i].SetLastName(temp);
+StaffData[i].setlastname(temp);
 in >> tempID;
-StaffData[i].SetID(tempID);
+StaffData[i].setid(tempID);
 in >> tempID;
-StaffData[i].SetPhoneNo(tempNo);
+StaffData[i].setnumber(tempNo);
 in >> date;
-StaffData[i].SetHiringDate(date);
+StaffData[i].setdatehired(date);
 in >> bonus;
-StaffData[i].SetBonusCode(bonus);
+StaffData[i].setbonuscode(bonus);
 in >> tempNo;
-StaffData[i].SetCurrentSalary(tempNo);
+StaffData[i].setcurrentsalary(tempNo);
 }
 cout << "Read staff.txt Sucessfully..." << endl;
 }
-void Student_Staff::Highest_GPA(class Student s[], int size)
+void student_staff::highest_gpa(class student students[], int size)
 { //function Highest_GPA
-double max = s[0].GetGPA();
+double max = students[0].getgpa();
 int index = 0;
 for (int i = 1; i < size; i++)
 {
-if (s[i].GetGPA() > max)
+if (students[i].getgpa() > max)
 {
-max = s[i].GetGPA();
+max = students[i].getgpa();
 index = i;
 }
 }
-cout << s[index].GetFirstName() << " " << s[index].GetLastName() << " Has the highest Gpa" << endl;
+cout << students[index].getfirstname() << " " << students[index].getlastname() << " Has the highest Gpa" << endl;
 }
-int Student_Staff::N_of_UnderGrad(class Student s[], int size)
+int student_staff::n_of_undergrad(class student students[], int size)
 {
 int count = 0;
 for (int i = 0; i < size; i++)
 {
-if (s[i].CompleteProgram() == true)
+if (students[i].completeprogram() == true)
 count++;
 }
 return count;
 }
-void Student_Staff::Same_Hire_Year(class Staff sf[], int size, string year)
+void student_staff::same_hire_year(class staff staffs[], int size, string year)
 {
 
 for (int i = 0; i < size; i++)
 {
-string date = sf[i].GetHiringDate();
+string date = staffs[i].getdatehired();
 
 if (date.substr(5, 7) == year)
 {
 cout << endl
-<< "Name: " << sf[i].GetFirstName() << " "
-<< sf[i].GetLastName() << ", Year: " << date.substr(5, 7) << endl;
+<< "Name: " << staffs[i].getfirstname() << " "
+<< staffs[i].getlastname() << ", Year: " << date.substr(5, 7) << endl;
 }
 }
 }
