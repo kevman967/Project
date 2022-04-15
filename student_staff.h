@@ -3,12 +3,13 @@
 #include <fstream>
 class student_staff{
 public:
-student *students;
-staff *staffs;
+student *s;
+staff *sf;
+
 student_staff();
-void readstudent(class student students);
-void readstaff(class staff staffs);
-void highest_gpa(class student students[], int size);
-int n_of_undergrad(class student students[], int size);
-void same_hire_year(class staff staffs[],int size, string year);
+void ReadStudent(class Student s[]);
+void ReadStaff(class Staff sf[]);
+void Highest_GPA(class Student s[], int size);
+int N_of_UnderGrad(class Student s[], int size);
+void Same_Hire_Year(class Staff sf[], int size, string year);
 };
