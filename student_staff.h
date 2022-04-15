@@ -1,15 +1,14 @@
 #include "staff.h"
 #include "student.h"
 #include <fstream>
+using namespace std;
 class student_staff{
-public:
-student *students;
-staff *staffs;
-
-student_staff();
-void readstudent( student s[]);
-void readstaff( staff sf[]);
-void highest_gpa( student s[], int size);
-int n_of_undergrad( student s[], int size);
-void same_hire_year( staff sf[], int size, string year);
+    public:
+    student_staff();
+    void highest_gpa();
+    int n_of_undergrad();
+    void same_hire_year();
+    private:
+    staff* staffptr;
+    student* studentptr;
 };

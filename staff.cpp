@@ -1,4 +1,5 @@
 #include "staff.h"
+using namespace std;
 //getter function
 staff::staff(){
     firstname ="";
