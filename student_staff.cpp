@@ -1,5 +1,6 @@
 #include "student_staff.h"
-
+using namespace std;
+#include <iostream>
 student_staff::student_staff()
 { //constructor
 students = new student[5];
@@ -7,7 +8,7 @@ staffs = new staff[5];
 readstudent(students);
 readstaff(staffs);
 }
-void student_staff::readstudent(class student studentDetails[])
+void student_staff::readstudent(student studentDetails[])
 {
 ifstream in;
 int totalLines, num;
@@ -40,7 +41,7 @@ studentDetails[i].setprogram(tempint);
 cout << "\nRead student.txt Sucessfully..." << endl;
 in.close();
 }
-void student_staff::readstaff(class staff StaffData[])
+void student_staff::readstaff( staff StaffData[])
 {
 fstream in;
 string temp, date;
@@ -68,7 +69,7 @@ StaffData[i].setcurrentsalary(tempNo);
 }
 cout << "Read staff.txt Sucessfully..." << endl;
 }
-void student_staff::highest_gpa(class student students[], int size)
+void student_staff::highest_gpa( student students[], int size)
 { //function Highest_GPA
 double max = students[0].getgpa();
 int index = 0;
@@ -82,7 +83,7 @@ index = i;
 }
 cout << students[index].getfirstname() << " " << students[index].getlastname() << " Has the highest Gpa" << endl;
 }
-int student_staff::n_of_undergrad(class student students[], int size)
+int student_staff::n_of_undergrad( student students[], int size)
 {
 int count = 0;
 for (int i = 0; i < size; i++)
@@ -92,7 +93,7 @@ count++;
 }
 return count;
 }
-void student_staff::same_hire_year(class staff staffs[], int size, string year)
+void student_staff::same_hire_year( staff staffs[], int size, string year)
 {
 
 for (int i = 0; i < size; i++)

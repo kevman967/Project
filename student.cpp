@@ -1,4 +1,7 @@
-#include "student.h" 
+#include "student.h"
+#include <string>
+#include <iostream>
+using namespace std;
 // include getter and setter for every attribute
 //constructor
 student::student()
