@@ -5,7 +5,7 @@ staff::staff(){
     lastname = "";
     id = 0;
     number = 0;
-    datehired = 0;
+    datehired = "";
     bonuscode = 0.0;
     currentsalary = 0;
 }
@@ -21,7 +21,7 @@ int staff::getid(){
 int staff::getnumber(){
     return number;
 }
-int staff::getdatehired(){
+string staff::getdatehired(){
     return datehired;
 }
 double  staff::getbonuscode(){
@@ -43,7 +43,7 @@ void staff::setid(int id1){
 void staff::setnumber(int number1){
     number = number1;
 }
-void staff::setdatehired(int datehired1){
+void staff::setdatehired(string datehired1){
     datehired=datehired1;
 }
 void staff::setbonuscode(double bonuscode1){

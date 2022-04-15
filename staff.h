@@ -11,7 +11,7 @@ class staff
     string getlastname();
     int getid();
     int getnumber();
-    int getdatehired();
+    string getdatehired();
     double getbonuscode();
     int getcurrentsalary();
     //list of setters
@@ -19,7 +19,7 @@ class staff
     void setlastname(string);
     void setid(int);
     void setnumber(int);
-    void setdatehired(int);
+    void setdatehired(string);
     void setbonuscode(double);
     void setcurrentsalary(int);
     //other functions
@@ -32,7 +32,7 @@ class staff
     string lastname;
     int id;
     int number;
-    int datehired; // only year
+    string datehired; 
     double bonuscode;
     int currentsalary;
 };
