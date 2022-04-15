@@ -1,6 +1,7 @@
-#include "staff.h"
-#include "student.h"
+#include "staff.cpp"
+#include "student.cpp"
 #include <fstream>
+
 using namespace std;
 class student_staff{
     public:

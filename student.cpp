@@ -85,6 +85,7 @@ bool student::completeprogram(){
         else
             return false;
     }
+    return 0;
 }
 string student::studentstatus(){
     if (gpa >= 3.5)
