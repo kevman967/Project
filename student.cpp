@@ -102,14 +102,14 @@ string student::studentstatus(){
         return "Error";
 }
 void student::print_std_info(){
-    cout<<firstname<<endl;
-    cout<<lastname<<endl;
-    cout<<id<<endl;
-    cout<<birth<<endl;
-    cout<<gpa<<endl;
-    cout<<startyear<<endl;
-    cout<<completed_credit<<endl;
-    cout<<program<<endl;
+    cout<<"firstname:"<<firstname<<endl;
+    cout<<"lastname:"<<lastname<<endl;
+    cout<<"id:"<<id<<endl;
+    cout<<"birth:"<<birth<<endl;
+    cout<<"gpa:"<<gpa<<endl;
+    cout<<"start year:"<<startyear<<endl;
+    cout<<"completed credit:"<<completed_credit<<endl;
+    cout<<"program:"<<program<<endl;
 }
 int student::compare_gpa(student student1){
     if (gpa > student1.getgpa())

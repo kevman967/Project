@@ -6,7 +6,7 @@ staff::staff(){
     lastname = "";
     id = 0;
     number = 0;
-    datehired = "";
+    datehired = 0;
     bonuscode = 0.0;
     currentsalary = 0;
 }
@@ -22,7 +22,7 @@ int staff::getid(){
 int staff::getnumber(){
     return number;
 }
-string staff::getdatehired(){
+int staff::getdatehired(){
     return datehired;
 }
 double  staff::getbonuscode(){
@@ -44,7 +44,7 @@ void staff::setid(int id1){
 void staff::setnumber(int number1){
     number = number1;
 }
-void staff::setdatehired(string datehired1){
+void staff::setdatehired(int datehired1){
     datehired=datehired1;
 }
 void staff::setbonuscode(double bonuscode1){
@@ -54,13 +54,13 @@ void staff::setcurrentsalary(int currentsalary1){
     currentsalary= currentsalary1;
 }
 void staff::print_stf_info(){
-    cout<<firstname<<endl;
-    cout<<lastname<<endl;
-    cout<<id<<endl;
-    cout<<number<<endl;
-    cout<<datehired<<endl;
-    cout<<bonuscode<<endl;
-    cout<<currentsalary<<endl;
+    cout<<"first name:"<<firstname<<endl;
+    cout<<"last name:"<<lastname<<endl;
+    cout<<"id:"<<id<<endl;
+    cout<<"number:"<<number<<endl;
+    cout<<"date hired:"<<datehired<<endl;
+    cout<<"bonus code:"<<bonuscode<<endl;
+    cout<<"current salary:"<<currentsalary<<endl;
 }
 void staff::calculate_salary(){
     currentsalary = currentsalary + currentsalary * bonuscode;

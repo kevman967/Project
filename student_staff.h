@@ -8,8 +8,10 @@ class student_staff{
     student_staff();
     void highest_gpa();
     int n_of_undergrad();
-    void same_hire_year();
-    private:
+    void same_hire_year(int);
     staff* staffptr;
     student* studentptr;
+    private:
+    int staffsize;
+    int studentsize;
 };
